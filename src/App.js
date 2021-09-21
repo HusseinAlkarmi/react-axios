@@ -44,20 +44,23 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>City Explorer app</h3>
+        <h3 style={{textAlign:'center', background:'lightblue', padding:'60px',margin:'0px'}}>City Explorer app</h3>
         {/* <button onClick={this.getLocFun}>Get Location</button> */}
-        <form onSubmit={this.getLocFun} >
+        <form onSubmit={this.getLocFun} style={{textAlign:'left', background:'lightblue', padding:'20px', margin:'0px'}}>
           <input type="text" name='city' />
           <input type="submit" value='get city info' />
         </form>
 
         {this.state.showLocInfo &&
           <>
-            <p>City name: {this.state.searchQuery}</p>
-            <p>latitude: {this.state.locationResult.lat}</p>
-            <p>longitude: {this.state.locationResult.lon} </p>
+            <p  style={{textAlign:'center', background:'blue', padding:'20px', margin:'0px', color:'white'}}>City name: {this.state.searchQuery}</p>
 
-            <img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${this.state.locationResult.lat},${this.state.locationResult.lon}&zoom=10`} alt="city" />
+            <p style={{textAlign:'center', background:'blue', padding:'20px', margin:'0px', color:'white'}}>latitude: {this.state.locationResult.lat}</p>
+
+            <p style={{textAlign:'center', background:'blue', padding:'20px', margin:'0px', color:'white', marginBottom:'20px'}}>longitude: {this.state.locationResult.lon} </p>
+
+            <img style={{ background:'blue', padding:'20px', marginLeft:'28%', color:'white', marginBottom:'20px'}}
+            src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${this.state.locationResult.lat},${this.state.locationResult.lon}&zoom=10`} alt="city" />
 
           </>
         }
