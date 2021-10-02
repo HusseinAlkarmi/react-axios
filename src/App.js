@@ -73,8 +73,8 @@ class App extends React.Component {
 
 
 
-    // let URLw = `${process.env.REACT_APP_SERVER_LINK}/weather?city=${this.state.searchQuery}`;
-    let URLw = `https://city-explorer-api301d33.herokuapp.com/weather?city=${this.state.searchQuery}`;
+    let URLw = `${process.env.REACT_APP_SERVER_LINK}/weather?searchQuery=${this.state.searchQuery}`;
+    // let URLw = `https://city-explorer-api301d33.herokuapp.com/weather?searchQuery=${this.state.searchQuery}`;
     console.log(URLw);
     let weather = await axios.get(URLw);
 
@@ -90,8 +90,8 @@ class App extends React.Component {
 
   getMovie = async (event) => {
   
-    // let URL = `${process.env.REACT_APP_SERVER_LINK}/movie?searchQuery=${this.state.searchQuery}`;
-    let URL = `https://city-explorer-api301d33.herokuapp.com/movie?searchQuery=${this.state.searchQuery}`;
+    let URL = `${process.env.REACT_APP_SERVER_LINK}/movie?searchQuery=${this.state.searchQuery}`;
+    // let URL = `https://city-explorer-api301d33.herokuapp.com/movie?searchQuery=${this.state.searchQuery}`;
     console.log(URL);
     let movies = await axios.get(URL);
     console.log("result", movies.data);
