@@ -24,6 +24,8 @@ class App extends React.Component {
      weatherData: false,
      movieData: false,
 
+     
+
     };
   }
 
