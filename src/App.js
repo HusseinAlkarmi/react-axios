@@ -22,7 +22,7 @@ class App extends React.Component {
       showLocInfo: false,
       showError: false,
      weatherData: false,
-     weatherData:false
+     movieData: false,
 
     };
   }
