@@ -10,6 +10,8 @@ import Weather from "./components/Weather";
 import Movies from "./components/Movies";
 
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
